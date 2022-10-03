@@ -1,0 +1,221 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	8450 4100 9850 4100
+Wire Wire Line
+	4200 1800 4450 1800
+Wire Wire Line
+	5450 2000 5450 2150
+Wire Wire Line
+	5250 2000 5450 2000
+$Comp
+L power:GNDREF #PWR05
+U 1 1 6337CCB5
+P 9400 3050
+F 0 "#PWR05" H 9400 2800 50  0001 C CNN
+F 1 "GNDREF" H 9405 2877 50  0000 C CNN
+F 2 "" H 9400 3050 50  0001 C CNN
+F 3 "" H 9400 3050 50  0001 C CNN
+	1    9400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR02
+U 1 1 633E6667
+P 5450 2150
+F 0 "#PWR02" H 5450 1900 50  0001 C CNN
+F 1 "GNDREF" H 5455 1977 50  0000 C CNN
+F 2 "" H 5450 2150 50  0001 C CNN
+F 3 "" H 5450 2150 50  0001 C CNN
+	1    5450 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 2900 9400 3050
+Wire Wire Line
+	9050 2900 9400 2900
+Wire Wire Line
+	6050 4400 7250 4400
+Wire Wire Line
+	6050 4500 7250 4500
+Connection ~ 5450 2600
+Connection ~ 6500 3000
+Wire Wire Line
+	6500 2600 5450 2600
+Wire Wire Line
+	6500 3000 6500 2600
+$Comp
+L ESP8266:ESP-01v090 U4
+U 1 1 63377060
+P 8100 3050
+F 0 "U4" H 8100 3565 50  0000 C CNN
+F 1 "ESP-01v090" H 8100 3474 50  0000 C CNN
+F 2 "" H 8100 3050 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 8100 3050 50  0001 C CNN
+	1    8100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2900 6400 3400
+Wire Wire Line
+	6400 2900 7150 2900
+Wire Wire Line
+	7150 3200 6500 3200
+Wire Wire Line
+	9050 3200 9050 3500
+$Comp
+L My~Library:DRV8833 U3
+U 1 1 633CAACA
+P 7850 4500
+F 0 "U3" H 7850 5167 50  0000 C CNN
+F 1 "DRV8833" H 7850 5076 50  0000 C CNN
+F 2 "" H 8300 4950 50  0001 L CNN
+F 3 "" H 7700 5050 50  0001 C CNN
+	1    7850 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 2600 5450 2600
+$Comp
+L My~Library:DS3231 U2
+U 1 1 633C67FF
+P 4050 4050
+F 0 "U2" H 4330 4096 50  0000 L CNN
+F 1 "DS3231" H 4330 4005 50  0000 L CNN
+F 2 "" H 4050 3550 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231M.pdf" H 4050 3450 50  0001 C CNN
+	1    4050 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Converter_ACDC:RAC04-09SGA PS1
+U 1 1 633AC4FF
+P 4850 1900
+F 0 "PS1" H 4850 2267 50  0001 C CNN
+F 1 "AC to 9V" H 4850 2175 50  0000 C CNN
+F 2 "" H 4850 1550 50  0001 C CNN
+F 3 "" H 4750 2200 50  0001 C CNN
+	1    4850 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4400 8750 4400
+Wire Wire Line
+	8450 4500 8750 4500
+Wire Wire Line
+	7050 4900 7250 4900
+Wire Wire Line
+	7050 5000 7050 4900
+$Comp
+L power:GNDREF #PWR04
+U 1 1 633A11EC
+P 7050 5000
+F 0 "#PWR04" H 7050 4750 50  0001 C CNN
+F 1 "GNDREF" H 7055 4827 50  0000 C CNN
+F 2 "" H 7050 5000 50  0001 C CNN
+F 3 "" H 7050 5000 50  0001 C CNN
+	1    7050 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 5000 5450 5150
+$Comp
+L power:GNDREF #PWR03
+U 1 1 633902B2
+P 5450 5150
+F 0 "#PWR03" H 5450 4900 50  0001 C CNN
+F 1 "GNDREF" H 5455 4977 50  0000 C CNN
+F 2 "" H 5450 5150 50  0001 C CNN
+F 3 "" H 5450 5150 50  0001 C CNN
+	1    5450 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4400 4050 4650
+$Comp
+L power:GNDREF #PWR01
+U 1 1 6338F6ED
+P 4050 4650
+F 0 "#PWR01" H 4050 4400 50  0001 C CNN
+F 1 "GNDREF" H 4055 4477 50  0000 C CNN
+F 2 "" H 4050 4650 50  0001 C CNN
+F 3 "" H 4050 4650 50  0001 C CNN
+	1    4050 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3700 4050 2600
+Wire Wire Line
+	4400 4100 5050 4100
+Wire Wire Line
+	4400 4000 5050 4000
+Wire Wire Line
+	9050 3500 6050 3500
+Wire Wire Line
+	5450 3000 5450 2600
+Wire Wire Line
+	6050 3400 6400 3400
+$Comp
+L MCU_Module:Arduino_Nano_v2.x A1
+U 1 1 63375CEE
+P 5550 4000
+F 0 "A1" H 5900 2950 50  0000 C CNN
+F 1 "Arduino_Nano_v2.x" H 5550 2820 50  0001 C CNN
+F 2 "Module:Arduino_Nano" H 5550 4000 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/uploads/Main/ArduinoNanoManual23.pdf" H 5550 4000 50  0001 C CNN
+	1    5550 4000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 63401382
+P 8950 4400
+F 0 "J1" H 9050 4329 50  0000 L CNN
+F 1 "Conn_Coaxial" H 9050 4284 50  0001 L CNN
+F 2 "" H 8950 4400 50  0001 C CNN
+F 3 " ~" H 8950 4400 50  0001 C CNN
+	1    8950 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4500 8750 4600
+Wire Wire Line
+	8750 4600 8950 4600
+$Comp
+L power:AC #PWR0101
+U 1 1 63404F23
+P 4200 1800
+F 0 "#PWR0101" H 4200 1700 50  0001 C CNN
+F 1 "AC" H 4200 2075 50  0000 C CNN
+F 2 "" H 4200 1800 50  0001 C CNN
+F 3 "" H 4200 1800 50  0001 C CNN
+	1    4200 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1800 5650 1800
+Wire Wire Line
+	5650 1800 5650 3000
+Wire Wire Line
+	5650 1800 9850 1800
+Connection ~ 5650 1800
+Wire Wire Line
+	9850 1800 9850 4100
+Wire Wire Line
+	6500 3000 7150 3000
+Wire Wire Line
+	6500 3000 6500 3200
+$EndSCHEMATC
