@@ -1,0 +1,39 @@
+BB:BeagleBone;
+ESP:ESP8266;
+A:Arduino;
+RTC;
+
+hspace A-RTC 250;
+hspace A-ESP 150;
+hspace BB-ESP 150;
+
+|||;
+
+A->RTC:lost power?;
+RTC->A:true/false;
+box ESP..RTC: \b\pcif true
+{
+
+  A>>ESP:time?;
+  ESP>>A:dateTime;
+  A>>RTC:\iadjust(\idateTime);
+
+};
+A->RTC:\igetAlarm(\i2);
+RTC->A:A2DateTime;
+
+box A--RTC:\0
+  \iif ( A2DateTime < now )\i
+  bagna e reset timer
+{
+    vspace 6;
+    A>>RTC:\isetAlarm2(\inextScheduled);
+};
+A->ESP:wokeDateTime;
+ESP->A:status?;
+A->ESP:state;
+ESP>BB:\pl
+        state
+        wokeDateTime
+        nextScheduled
+        skipped;

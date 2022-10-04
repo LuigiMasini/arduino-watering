@@ -1,0 +1,14 @@
+BB:BeagleBone;
+ESP:ESP8266;
+A:Arduino;
+
+box ..:\pcOptional
+    
+{
+    BB->ESP:status?;
+    ESP->A:status?;
+};
+
+A->ESP:state;
+note:manda autonomamente\nogni volta che bagna;
+ESP>BB:state;

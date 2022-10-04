@@ -1,0 +1,12 @@
+BeagleBone, ESP8266, Arduino;
+
+vspace 10;
+
+|->BeagleBone: \prnew\nParams;
+BeagleBone->ESP8266:new Params;
+ESP8266->Arduino:new Params;
+box Arduino--Arduino:\5Apply\n\0\pl\--save on EEprom\n-set Alarm 2;
+;
+Arduino->ESP8266:ok;
+ESP8266->BeagleBone:ok;
+|<-BeagleBone:ok;
