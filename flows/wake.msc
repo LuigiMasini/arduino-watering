@@ -1,11 +1,11 @@
-BB:BeagleBone;
+S:Server;
 ESP:ESP8266;
 A:Arduino;
 RTC;
 
 hspace A-RTC 250;
 hspace A-ESP 150;
-hspace BB-ESP 150;
+hspace S-ESP 150;
 
 |||;
 
@@ -32,7 +32,7 @@ box A--RTC:\0
 A->ESP:wokeDateTime;
 ESP->A:status?;
 A->ESP:state;
-ESP>BB:\pl
+ESP>S:\pl
         state
         wokeDateTime
         nextScheduled

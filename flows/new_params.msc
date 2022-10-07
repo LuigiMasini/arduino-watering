@@ -1,12 +1,14 @@
-BeagleBone, ESP8266, Arduino;
+S: Server;
+ESP: ESP8266;
+A: Arduino;
 
 vspace 10;
 
-|->BeagleBone: \prnew\nParams;
-BeagleBone->ESP8266:new Params;
-ESP8266->Arduino:new Params;
-box Arduino--Arduino:\5Apply\n\0\pl\--save on EEprom\n-set Alarm 2;
+|->S: \prnew\nParams;
+S->ESP:new Params;
+ESP->A:new Params;
+box A--A:\5Apply\n\0\pl\--save on EEprom\n-set Alarm 2;
 ;
-Arduino->ESP8266:ok;
-ESP8266->BeagleBone:ok;
-|<-BeagleBone:ok;
+A->ESP:ok;
+ESP->S:ok;
+|<-S:ok;
