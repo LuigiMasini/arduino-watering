@@ -56,7 +56,7 @@ public:
 	}
 
 
-	int8_t saveNewWatering(uint64_t time) {
+	int8_t setLastWatering(uint64_t time) {
 
 		uint8_t time_bytes[8], tmp;
 
